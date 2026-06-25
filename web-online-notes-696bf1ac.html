@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 产品说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f1eb;
+            font-family: 'Georgia', 'Times New Roman', '宋体', serif;
+            color: #3b3a36;
+            line-height: 1.75;
+            padding: 2.5rem 1rem;
+        }
+
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #fefcf7;
+            padding: 3rem 2.5rem;
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+            border: 1px solid #ede6db;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            border-left: 5px solid #b7a48b;
+            padding-left: 1.2rem;
+            margin-bottom: 2rem;
+            color: #2d2a24;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin: 2.5rem 0 1rem 0;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px solid #e3d9ce;
+            color: #4f4940;
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+            text-align: justify;
+            font-size: 1rem;
+        }
+
+        .inset-callout {
+            background: #f3ede6;
+            border-left: 4px solid #c3b3a0;
+            padding: 1.2rem 1.6rem;
+            margin: 1.8rem 0;
+            border-radius: 12px;
+            font-style: normal;
+            color: #49443c;
+        }
+
+        .inset-callout strong {
+            color: #5e5344;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .grid-item {
+            background: #f8f3ec;
+            padding: 1.5rem 1rem;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid #e3d7cb;
+            transition: background 0.15s;
+        }
+
+        .grid-item:hover {
+            background: #efe6db;
+        }
+
+        .grid-item .emoji-icon {
+            font-size: 1.8rem;
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+
+        .grid-item h3 {
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            color: #3f3a32;
+        }
+
+        .grid-item p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .scenario-box {
+            background: #faf6f0;
+            border-radius: 20px;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border: 1px solid #e7ddd0;
+        }
+
+        .scenario-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .scenario-box li {
+            padding: 0.4rem 0;
+            padding-left: 1.8rem;
+            position: relative;
+        }
+
+        .scenario-box li::before {
+            content: "·";
+            font-size: 1.6rem;
+            position: absolute;
+            left: 0.2rem;
+            top: -0.1rem;
+            color: #a6927d;
+        }
+
+        .faq-block {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e5dbcf;
+        }
+
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-item .q {
+            font-weight: 500;
+            color: #4b433b;
+        }
+
+        .faq-item .a {
+            margin-left: 1.2rem;
+            color: #5c554b;
+        }
+
+        a {
+            color: #7a684f;
+            text-decoration: none;
+            border-bottom: 1px solid #dccfc0;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        a:hover {
+            color: #4d3f2e;
+            border-bottom-color: #4d3f2e;
+        }
+
+        .footnote {
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #7f786e;
+            padding: 0.5rem 0;
+            border-top: 1px dashed #dacfc3;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+            .container {
+                padding: 1.8rem 1.2rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+                padding-left: 0.8rem;
+            }
+            .highlight-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .scenario-box {
+                padding: 1rem 1rem;
+            }
+        }
+
+        sup {
+            font-size: 0.7rem;
+            color: #9f9284;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>爱游戏 · 一份资料索引说明</h1>
+
+        <p>
+            在浏览和整理网络游戏相关信息的时候，常常会遇到信息零散、版本混杂的情况。后来我留出一部分时间，专门把游戏资料、玩法说明以及版本动态按主题做归类，存放到了 <a href="https://web-online-igame.com">爱游戏</a> 这个站点。它不像大型攻略站那样面面俱到，更像一个经过筛选的卡片盒——每一条记录都来自实际游玩中的笔记或官方来源的摘录。
+        </p>
+
+        <div class="inset-callout">
+            <strong>说明：</strong> 这个页面不是推荐页，也不是活动页。它是一份产品式的功能摘要，帮助你了解 <a href="https://web-online-igame.com">爱游戏</a> 在信息整理层面的定位与用法。
+        </div>
+
+        <h2>内容的特点</h2>
+        <div class="highlight-grid">
+            <div class="grid-item">
+                <span class="emoji-icon">📋</span>
+                <h3>摘要优先</h3>
+                <p>每款游戏或版本更新都配有简述，不堆叠未经验证的细节。</p>
+            </div>
+            <div class="grid-item">
+                <span class="emoji-icon">🏷️</span>
+                <h3>标签索引</h3>
+                <p>按题材、机制、年代等维度交叉标记，方便横向对比。</p>
+            </div>
+            <div class="grid-item">
+                <span class="emoji-icon">📆</span>
+                <h3>历史记录</h3>
+                <p>保留早期的版本说明与改动日志，可作为个人参考。</p>
+            </div>
+            <div class="grid-item">
+                <span class="emoji-icon">🔗</span>
+                <h3>来源可溯</h3>
+                <p>多数条目附有原文或官方链接，供进一步核实。</p>
+            </div>
+        </div>
+
+        <h2>可能适合的使用场景</h2>
+        <div class="scenario-box">
+            <ul>
+                <li>想快速了解某款游戏的背景设定与基础机制，不想在多个页面间跳转。</li>
+                <li>需要回顾旧版本的一些改动或活动内容，但官网历史页不易查找。</li>
+                <li>在做个人向的游戏笔记整理时，参考已有的摘要结构。</li>
+                <li>寻找不同游戏之间的机制对比，比如同类型游戏的收费模式或组队规则。</li>
+            </ul>
+        </div>
+
+        <p>
+            无论哪种场景，都建议把 <a href="https://web-online-igame.com">爱游戏</a> 当作一个查询起点，而非唯一依据。每个条目都标注了整理日期，超出半年的信息最好结合当前版本再做判断。毕竟游戏行业变化快，一个补丁就足以让旧攻略失效。
+        </p>
+
+        <h2>关于使用的一点建议</h2>
+        <p>
+            站点没有设置用户系统，也没有论坛或评论区。它更像一份公开的笔记本，所有内容都按照“资料卡片”的形式组织。如果你发现某个信息已经过时或者存在谬误，可以通过页面底部的反馈途径（如果有）告诉我。不过由于个人精力有限，更新节奏可能不太固定——这一点请适当理解。
+        </p>
+        <p>
+            另外，站内不包含任何破解、私服或非授权资源链接，所有资料都来自公开信息或已获得转载许可的内容。保持克制既是尊重，也是让这个索引能持续存在的基础。
+        </p>
+
+        <div class="faq-block">
+            <h2>常见疑问摘要</h2>
+            <div class="faq-item">
+                <p class="q">问：这个网站和官方游戏网站是什么关系？</p>
+                <p class="a">答：没有直接关系。它是一个独立的个人资料整理站点，引用内容均注明出处，不代行官方公告。</p>
+            </div>
+            <div class="faq-item">
+                <p class="q">问：内容偏向哪些类型的游戏？</p>
+                <p class="a">答：以客户端网游和跨平台联机游戏为主，部分包含独立游戏和经典单机作品的条目，但数量不多。</p>
+            </div>
+            <div class="faq-item">
+                <p class="q">问：我能否复制站内的内容用于其他用途？</p>
+                <p class="a">答：摘要性文字可参考，但建议自行核对原始来源。转载大段内容请保留出处链接。</p>
+            </div>
+        </div>
+
+        <div class="footnote">
+            页面中的信息仅供参考，具体以各游戏官方最新版本为准。<br>
+            © 个人整理 · 索引性质 · 无商业意图
+        </div>
+    </div>
+</body>
+</html>
