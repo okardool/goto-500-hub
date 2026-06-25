@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 资讯整理与索引</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: #f8fafc;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.7;
+            color: #1e2a3a;
+            padding: 2.8rem 1.5rem 4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 720px;
+            width: 100%;
+        }
+
+        /* 极简留白 + 精细字距 */
+        h1, h2, h3, p, ul, ol, blockquote, hr {
+            margin-bottom: 1.2rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-top: 0.8rem;
+            margin-bottom: 0.25rem;
+            color: #0f172a;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #54708c;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            border-left: 3px solid #cbd5e1;
+            padding-left: 1rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            margin-top: 2.2rem;
+            margin-bottom: 0.6rem;
+            color: #1e293b;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 0.3rem;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-top: 1.5rem;
+            margin-bottom: 0.4rem;
+            color: #2c3e50;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #2d3f50;
+            letter-spacing: 0.01em;
+        }
+
+        p + p {
+            margin-top: -0.4rem;
+        }
+
+        a {
+            color: #1e4a6b;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s ease;
+            font-weight: 450;
+        }
+
+        a:hover {
+            border-bottom-color: #1e4a6b;
+        }
+
+        ul, ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1.4rem;
+            color: #2d3f50;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        blockquote {
+            margin-left: 0;
+            padding: 0.8rem 1.2rem;
+            background: #ecf1f7;
+            border-left: 4px solid #8ba4bf;
+            color: #1e3a5f;
+            font-style: normal;
+            border-radius: 0 8px 8px 0;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, #dce2eb, transparent);
+            margin: 2rem 0 1.5rem;
+        }
+
+        .card-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .card-list li {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1rem 1.1rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eaf0f6;
+            transition: box-shadow 0.2s;
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+
+        .card-list li:hover {
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.04);
+        }
+
+        .card-list li strong {
+            display: block;
+            font-weight: 550;
+            color: #0f293f;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-item .q {
+            font-weight: 500;
+            color: #1e3a5f;
+            margin-bottom: 0.1rem;
+        }
+
+        .faq-item .a {
+            color: #3a5169;
+            margin-left: 0.2rem;
+        }
+
+        .footnote {
+            font-size: 0.9rem;
+            color: #5c6f83;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1.2rem;
+            margin-top: 2.2rem;
+        }
+
+        .inline-link {
+            white-space: nowrap;
+        }
+
+        @media (max-width: 540px) {
+            body { padding: 1.8rem 1rem 3rem; }
+            h1 { font-size: 1.8rem; }
+            .subhead { font-size: 0.95rem; }
+            .card-list { grid-template-columns: 1fr; }
+            .page { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 开场短句 -->
+    <h1>信息索引 · 项目笔记</h1>
+    <div class="subhead">从零散记录到结构化整理，面向体育资讯与内容聚合</div>
+
+    <!-- 承接段落：资料整理视角 -->
+    <p>
+        日常浏览中，体育资讯、赛事数据、文化侧记常常散落在不同平台。一个轻量的索引起点，有助于将注意力集中到经过筛选的信源。本文档围绕「<a href="https://web-sports-igame.com">爱游戏</a>」所代表的资讯梳理方向，记录在资料收集中观察到的几种内容特征与使用场景。这些观察源自对站点结构、分类逻辑以及用户交互模式的归纳，并非完整评测，仅作索引参考。
+    </p>
+
+    <p>
+        与多数体育类信息聚合不同，该平台在内容编排上更侧重赛事背景的横向对比，以及社区讨论的整合。从检索效率来看，分类标签的颗粒度与搜索联想准确度是影响信息获取速度的关键。下文从内容组织、数据覆盖、以及日常使用中的几个典型切面展开。
+    </p>
+
+    <!-- 特点列表（使用卡片网格） -->
+    <h2>整理过程中留意到的特点</h2>
+    <ul class="card-list">
+        <li>
+            <strong>赛事分类维度</strong>
+            按联赛、赛季、杯赛分级，同时保留“热门专题”快速入口，适合从宏观切入细项。
+        </li>
+        <li>
+            <strong>资料卡片密度</strong>
+            每条信息条目包含时间、对阵、关键数据标签，减少二次点击的频次，浏览效率较高。
+        </li>
+        <li>
+            <strong>社区内容摘要</strong>
+            讨论区热帖会自动提取首段与引用数，方便判断内容深度，避免无效跳转。
+        </li>
+        <li>
+            <strong>多端适配一致</strong>
+            窄屏下导航收缩为汉堡菜单，卡片列表转为单列，阅读区域保持舒适宽度。
+        </li>
+    </ul>
+
+    <!-- 场景段落 + 过渡 -->
+    <h2>三种典型使用场景</h2>
+    <p>
+        从个人整理习惯出发，以下场景相对高频：<br>
+        <strong>· 赛前准备：</strong>浏览近期对战记录与伤停信息，快速建立背景认知。<br>
+        <strong>· 赛后回溯：</strong>通过数据面板与战报摘要对比预期差异，辅助复盘笔记。<br>
+        <strong>· 横向比较：</strong>利用多赛季统计与排名变动，观察球队或选手的长期趋势。
+    </p>
+
+    <p>
+        在这些场景中，索引结构是否清晰直接决定了整理效率。相对克制的视觉风格——低饱和度、高留白、清晰分隔——有助于减少视觉噪音，让信息本身成为焦点。
+    </p>
+
+    <!-- FAQ 摘要（非标准问答形式，偏索引式说明） -->
+    <h2>常见索引疑问摘要</h2>
+
+    <div class="faq-item">
+        <div class="q">Q: 资料覆盖范围如何界定？</div>
+        <div class="a">以主流团队项目及个人项目为主，兼顾二级联赛与青年赛事。数据更新频率约为每日一次，重大赛事期间会临时加快。</div>
+    </div>
+    <div class="faq-item">
+        <div class="q">Q: 内容筛选是否带有编辑倾向？</div>
+        <div class="a">内容呈现基于公开信息与社区贡献，编辑部主要负责分类与摘要编写，不改变原始数据事实。用户可通过反馈渠道提交补充。</div>
+    </div>
+    <div class="faq-item">
+        <div class="q">Q: 索引页与主站内容同步情况？</div>
+        <div class="a">本页为静态说明页面，主要介绍信息组织逻辑。实时内容请直接参考主站 <a href="https://web-sports-igame.com" class="inline-link">爱游戏</a> 的当前页面。</div>
+    </div>
+
+    <!-- 温和结尾 加上一句收束 -->
+    <hr>
+    <p style="font-size: 0.95rem; color: #475569;">
+        从信息整理的角度看，一个清晰、克制的索引入口能降低认知负荷。以上内容基于日常使用与资料归类经验整理，仅供内部参考与结构示意。如果你也在寻找一个体育资讯的整理起点，或许可以从<a href="https://web-sports-igame.com">爱游戏</a>的内容分类开始，逐步建立自己的阅读与索引流。
+    </p>
+
+    <div class="footnote">
+        本文档不构成任何投资或决策建议 · 内容基于个人整理视角 · 最后更新 2025-04
+    </div>
+
+</div>
+</body>
+</html>
