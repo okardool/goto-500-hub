@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 记录与连接</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f4f9fc;
+            color: #1d2c3a;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* hero */
+        .hero {
+            background: linear-gradient(145deg, #d9f0f5 0%, #b8dfe9 100%);
+            padding: 72px 0 64px;
+            text-align: center;
+            border-bottom: 4px solid #3b9eaf;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #0e4a55;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 28px;
+            color: #1f5f6b;
+        }
+
+        .hero a {
+            display: inline-block;
+            background: #0e4a55;
+            color: #ffffff;
+            padding: 14px 32px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            box-shadow: 0 6px 12px rgba(14, 74, 85, 0.15);
+            transition: background 0.25s, transform 0.2s;
+        }
+
+        .hero a:hover {
+            background: #1b6573;
+            transform: translateY(-2px);
+        }
+
+        /* 优势区 网格卡片 */
+        .features {
+            padding: 60px 0 40px;
+        }
+
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 500;
+            color: #0e4a55;
+            margin-bottom: 36px;
+            border-left: 6px solid #3b9eaf;
+            padding-left: 18px;
+        }
+
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 28px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 24px 20px 28px;
+            box-shadow: 0 8px 20px rgba(0, 40, 60, 0.06);
+            transition: box-shadow 0.2s, transform 0.2s;
+            border: 1px solid #d2e6ec;
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 28px rgba(0, 65, 85, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #0b4e5a;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card h3::before {
+            content: "✦";
+            color: #2c8b9c;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #2d4a55;
+            line-height: 1.6;
+        }
+
+        /* 说明区 (陈述部分) */
+        .about {
+            padding: 40px 0 50px;
+            background: #ffffff;
+        }
+
+        .about-block {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .about-block p {
+            font-size: 1.05rem;
+            max-width: 780px;
+            color: #1d3a44;
+            margin-bottom: 0;
+        }
+
+        .highlight {
+            background: #e5f3f7;
+            padding: 20px 28px;
+            border-radius: 18px;
+            border-left: 6px solid #3b9eaf;
+            font-size: 1.05rem;
+            max-width: 820px;
+        }
+
+        .highlight a {
+            color: #0e5b68;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            font-weight: 500;
+        }
+
+        .highlight a:hover {
+            color: #06313b;
+        }
+
+        /* FAQ 摘要 */
+        .faq-summary {
+            padding: 48px 0 40px;
+        }
+
+        .faq-item {
+            background: #f0f8fb;
+            border-radius: 20px;
+            padding: 20px 24px;
+            margin-bottom: 20px;
+            border: 1px solid #cbe0e7;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #0b4e5a;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .faq-question::before {
+            content: "▸";
+            color: #2c8b9c;
+            font-size: 1.4rem;
+            margin-right: 12px;
+        }
+
+        .faq-answer {
+            color: #2b4c58;
+            padding-left: 30px;
+            font-size: 1rem;
+        }
+
+        .faq-answer a {
+            color: #0b5f6b;
+            text-decoration: underline;
+        }
+
+        .faq-answer a:hover {
+            color: #06313b;
+        }
+
+        .faq-more {
+            text-align: right;
+            margin-top: 8px;
+            font-size: 0.95rem;
+            color: #1e6b79;
+        }
+
+        /* 底部链接 */
+        .footer-links {
+            background: #dceef3;
+            padding: 28px 0 36px;
+            margin-top: 20px;
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .footer-inner p {
+            color: #1f5360;
+            font-size: 0.95rem;
+        }
+
+        .footer-links a {
+            color: #0b4e5a;
+            text-decoration: none;
+            border-bottom: 1px dashed #3b9eaf;
+            margin-right: 20px;
+            font-weight: 500;
+            transition: border 0.2s;
+        }
+
+        .footer-links a:hover {
+            border-bottom: 2px solid #1f6b78;
+        }
+
+        .footer-links .legal {
+            color: #2a5f6b;
+            font-size: 0.9rem;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #bfdae2;
+            margin: 20px 0;
+        }
+
+        /* 响应式 */
+        @media (max-width: 680px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.05rem;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .grid-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .faq-question::before {
+                font-size: 1.2rem;
+                margin-right: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- hero 区域 -->
+<section class="hero">
+    <div class="container">
+        <h1>信息 · 乐趣 · 联结</h1>
+        <p>一个以游戏话题为线索的内容站点，记录观点、更新与值得留意的动态。</p>
+        <a href="https://web-news-igame.com">爱游戏</a>
+    </div>
+</section>
+
+<!-- 优势区 -->
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">为什么留意这里</h2>
+        <div class="grid-cards">
+            <div class="card">
+                <h3>轻量化资讯</h3>
+                <p>不堆砌推送，不制造焦虑。只整理有实质内容的消息与短评，适合快速浏览。</p>
+            </div>
+            <div class="card">
+                <h3>视角平实</h3>
+                <p>没有夸张标题，没有诱导话术。用相对克制的语言聊游戏圈发生的事。</p>
+            </div>
+            <div class="card">
+                <h3>持续积累</h3>
+                <p>文章与条目会持续修订、补充来源，让信息本身更有脉络可寻。</p>
+            </div>
+            <div class="card">
+                <h3>没有噪音</h3>
+                <p>页面设计力求干净，阅读为主，没有弹窗、悬浮、自动播放，把选择权留给你。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 说明区（站点介绍 & 可信说明） -->
+<section class="about">
+    <div class="container about-block">
+        <p>
+            这个网站最初只是一个小型记录簿——把零散的游戏资讯、值得留意的开发动态、以及一些老游戏的背景故事整理在一起。后来逐渐变成了一个安静的角落，没有追逐热点，也没有复杂的运营逻辑。
+        </p>
+        <p>
+            内容大多来源于公开资料、开发者访谈、社区讨论，经过梳理和标注后呈现。每一篇文章都会注明可以核对的参考，如果你发现任何偏差，也欢迎通过站点上的联系方式指出。
+        </p>
+        <div class="highlight">
+            <strong>一点说明：</strong> 这个站点并非商业门户，也不售卖任何商品。它更像是一份共享的阅读笔记。想从头浏览或搜索某个话题，可以直接前往 <a href="https://web-news-igame.com">爱游戏</a> 主页。
+        </div>
+        <p>
+            我们相信，好的信息不需要包装成“必看”“震惊”，它只需要被诚实地说出来。所以这里没有诱导点击的按钮，也没有倒计时或浮层弹窗，唯一的目的就是让你安静地读点东西。
+        </p>
+    </div>
+</section>
+
+<!-- FAQ 摘要 -->
+<section class="faq-summary">
+    <div class="container">
+        <h2 class="section-title">常见疑问摘要</h2>
+        <div class="faq-item">
+            <div class="faq-question">这里的内容更新频率如何？</div>
+            <div class="faq-answer">
+                通常每周会有 2–4 篇新文章或修订。遇到行业活动或重要版本发布，可能会增加更新，但不会刻意凑数。
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">文章有来源或参考吗？</div>
+            <div class="faq-answer">
+                是的。每篇文末都会列出信息来源或延伸阅读链接。部分早期条目也在逐步补全标注。你可以直接访问 <a href="https://web-news-igame.com">爱游戏</a> 查阅具体文章。
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">我可以转载或分享这里的文章吗？</div>
+            <div class="faq-answer">
+                非商业性转载只需注明出处和作者。商业用途请提前联系。所有原创文本采用 CC BY-NC 4.0 协议。
+            </div>
+        </div>
+        <div class="faq-more">—— 更多回答可至站点内「关于」页面查看 ——</div>
+    </div>
+</section>
+
+<!-- 底部链接 -->
+<footer class="footer-links">
+    <div class="container footer-inner">
+        <p>
+            <a href="https://web-news-igame.com">爱游戏</a>
+            <span class="legal">· 记录 · 分享 · 非商业站点</span>
+        </p>
+        <p class="legal">
+            <span>内容仅供参考，不构成任何建议</span>
+            <span style="margin-left: 16px;">© 2024–2025</span>
+        </p>
+    </div>
+    <div class="container" style="margin-top: 10px;">
+        <hr>
+        <p style="font-size: 0.85rem; color: #2a5f6b; text-align: center;">
+            <a href="https://web-news-igame.com" style="border-bottom: none; text-decoration: underline; margin: 0;">爱游戏</a>
+            — 保持好奇心，保持谦逊。
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
